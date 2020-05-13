@@ -247,7 +247,10 @@ function isEnoughCash() {
 function CreateOffer() {
 	user['cash'] -= total_price
 	UpdateProfileCashUI()
-	//вывод чека
+
+	renderCheckList() 
+	MoveToCheck()
+
 	cart_props = []
 	renderCartList()
 }
@@ -255,6 +258,73 @@ function CreateOffer() {
 function UpdateProfileCashUI() {
 	let profile__cash = document.getElementsByClassName('profile__cash')[0]
 	profile__cash.textContent = `$${user['cash']}`
+}
+
+function MoveToCheck() {
+	CloseListing()
+	OpenCheckList()
+}
+
+function CloseListing() {
+	let listing_section = document.getElementsByClassName('listing')[0]
+	listing_section.classList.remove('active')
+}
+
+function OpenCheckList() {
+	let check_section = document.getElementsByClassName('check')[0]
+	check_section.classList.add('active')
+}
+
+function MoveToListing() {
+	CloseCheckList()
+	OpenListing()
+}
+
+function CloseCheckList() {
+	let check_section = document.getElementsByClassName('check')[0]
+	check_section.classList.remove('active')
+}
+
+function OpenListing() {
+	let listing_section = document.getElementsByClassName('listing')[0]
+	listing_section.classList.add('active')
+}
+
+function renderCheckList() {
+	let check_list = document.getElementsByClassName('check__list')[0]
+	let check_list_html = ''
+
+	for (let [index, prop] of cart_props.entries()) {
+		check_list_html +=
+		`
+		<div class="check__list-item">
+			<img src="${prop['img_url']}" class="item-img">
+			<div class="item-about">
+				<p class="item-title">${prop['title']}</p>
+				<p class="item-description">${prop['descr']}</p>
+			</div>
+			<p class="item-price">$${prop['price']}</p>
+		</div>
+		` 
+	}
+	check_list.innerHTML = check_list_html
+
+	UpdateCheck()
+}
+
+function UpdateCheck() {
+	UpdateCheckSize()
+	UpdateCheckPrice()
+}
+
+function UpdateCheckSize() {
+	let check_price = document.getElementsByClassName('check-price')[0]
+	check_price.textContent = `Сумма заказа: $${total_price}`
+}
+
+function UpdateCheckPrice() {
+	let check_size = document.getElementsByClassName('check-size')[0]
+	check_size.textContent = `Всего товаров: ${cart_props.length}`
 }
 
 
@@ -275,6 +345,8 @@ let cart__props = document.getElementsByClassName('cart__props')[0]
 let cart_img = document.getElementsByClassName('cart-img')[0] 
 
 let cart_buy_btn = document.getElementsByClassName('cart-buy-btn')[0]
+
+let check_back_btn = document.getElementsByClassName('check__back-btn')[0]
 
 
 login_btn.onclick = (() => {
@@ -308,6 +380,7 @@ unlogin_btn.onclick = (() => {
 	header__profile.classList.remove('active')
 	isAuthorized = false
 	user = null
+	MoveToListing()
 	cart_props = []
 	renderCartList()
 })
@@ -320,10 +393,15 @@ cart_buy_btn.onclick = (() => {
 	if (isAuthorized) {
 		if (isEnoughCash()) {
 			CreateOffer()
+			MoveToCheck()
 		}
 		else alert('Недостаточно средств для оформления заказа')
 	}
 	else alert('Пожалуйста, авторизуйтесь перед оформелнием заказа')
+})
+
+check_back_btn.onclick = (() => {
+	MoveToListing()
 })
 
 renderPropList()

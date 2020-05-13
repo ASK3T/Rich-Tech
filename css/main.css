@@ -29,6 +29,11 @@ p, h1, h2, h3, h4, h5, ul {
 	padding: 0;
 }
 
+h1 {
+	font-size: 36px;
+	font-weight: 700;
+}
+
 .header {
 	background-color: #6aa7fc;
 	height: 100px;
@@ -114,6 +119,11 @@ p, h1, h2, h3, h4, h5, ul {
 .listing {
 	margin-top: 70px;
 	color: #000;
+	display: none;
+}
+
+.listing.active {
+	display: block;
 }
 
 .listing__properties-list {
@@ -122,11 +132,6 @@ p, h1, h2, h3, h4, h5, ul {
 
 .listing__header {
 	margin-bottom: 35px;
-}
-
-.listing__label {
-	font-size: 36px;
-	font-weight: 700;
 }
 
 .listing__cart {
@@ -272,7 +277,7 @@ p, h1, h2, h3, h4, h5, ul {
 	height: auto;
 }
 
-.item-remove-btn:hover {
+.listing .item-remove-btn:hover {
 	color: #e03131;
 	border-color: #e03131;
 }
@@ -326,11 +331,91 @@ p, h1, h2, h3, h4, h5, ul {
 	padding: 10px 30px;
 }
 
+.check {
+	margin-top: 70px;
+	color: #000;
+
+	display: none;
+}
+
+.check.active {
+	display: block;
+}
+
+.check__wrap {
+	background-color: #fff;
+	border-radius: 7px;
+	box-shadow: 4px 10px 20px #DDD;
+	padding: 50px;
+	position: relative;
+}
+
+.back-btn {
+	position: absolute;
+	height: fit-content;
+	padding: 5px 20px;
+	font-size: 20px;
+}
+
+.check__label {
+	text-align: center;
+}
+
+.check__list {
+	margin-top: 25px;
+}
+
+.check__list-item {
+	display: inline-flex;
+	padding: 25px 0;
+	position: relative;
+	border-bottom: 2px solid #6aa7fc;
+}
+
+.check__list-item:last-child {
+	border: none;
+}
+
+.check .item-img {
+	height: 90px;
+}
+
+.check .item-title {
+	font-size: 20px;
+}
+
+.check .item-about {
+	margin: 0 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.check .item-description {
+    font-size: 13px;
+    color: #777;
+}
+
+.check .item-price {
+	font-size: 21px;
+	text-align: center;
+	color: #4e8ad8;
+	margin-top: 5px;
+}
+
+.check__info {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 25px;
+	font-size: 18px;
+}
+
 .footer {
 	background-color: #95badf;
 	height: 90px;
 	display: flex;
 	justify-content: center;
+	margin-top: 70px;
 }
 
 .footer__copyright {
