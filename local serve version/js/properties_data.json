@@ -1,0 +1,44 @@
+[
+	{
+		"id": 0,
+		"title": "17.3' Ноутбук Lenovo Ideapad L340-17IRH черный",
+		"descr": "[1920x1080, IPS, Intel Core i5 9300H, 4 х 2.4 ГГц, RAM 16 ГБ, HDD 1000 ГБ, SSD 256 ГБ, GeForce GTX 1650 4 Гб, Wi-Fi, BT, Windows 10 Home]",
+		"img_url": "img/property_0.jpg",
+		"price": 2499
+	},
+	{
+		"id": 1,
+		"title": "17.3' Ноутбук Acer Predator Helios 300 PH317-53-52CM черный",
+		"descr": "[1920x1080, IPS, Intel Core i5 9300H, 4 х 2.4 ГГц, RAM 8 ГБ, SSD 512 ГБ, GeForce GTX 1660 Ti 6 Гб, Wi-Fi, Windows 10 Home]",
+		"img_url": "img/property_1.jpg",
+		"price": 2699
+	},
+	{
+		"id": 2,
+		"title": "13.9' Ультрабук ASUS ZenBook UX392FA-AB016T голубой",
+		"descr": "[1920x1080, IPS, Intel Core i7 8565U, 4 х 1.8 ГГц, RAM 8 ГБ, SSD 512 ГБ, Intel UHD Graphics 620 , Wi-Fi, Windows 10 Home]",
+		"img_url": "img/property_2.jpg",
+		"price": 2799
+	},
+	{
+		"id": 3,
+		"title": "15.6' Ноутбук Acer Predator Helios 300 PH315-52-55FN черный",
+		"descr": "[1920x1080, IPS, Intel Core i5 9300H, 4 х 2.4 ГГц, RAM 8 ГБ, SSD 512 ГБ, GeForce GTX 1660 Ti 6 Гб, Wi-Fi, UNIX-подобная]",
+		"img_url": "img/property_3.jpg",
+		"price": 2999
+	},
+	{
+		"id": 4,
+		"title": "15.6' Ультрабук Lenovo Yoga C740-15IML серый",
+		"descr": "[1920x1080, IPS, Intel Core i7 10510U, 4 х 1.8 ГГц, RAM 16 ГБ, SSD 512 ГБ, Intel UHD Graphics 620 , Wi-Fi, Windows 10 Home]",
+		"img_url": "img/property_4.jpg",
+		"price": 3099
+	},
+	{
+		"id": 5,
+		"title": "17.3' Ноутбук HP OMEN 17-cb0050ur черный",
+		"descr": "[1920x1080, IPS, Intel Core i7 9750H, 6 х 2.6 ГГц, RAM 16 ГБ, SSD 512 ГБ, GeForce GTX 1660 Ti 6 Гб, Wi-Fi, DOS]",
+		"img_url": "img/property_5.jpg",
+		"price": 3299
+	}
+]

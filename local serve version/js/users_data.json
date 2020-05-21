@@ -1,0 +1,18 @@
+[
+	{
+		"id": 0,
+		"username": "test",
+		"pass": "111",
+		"img_url": "img/avatar1.png",
+		"realname": "Евгений",
+		"cash": 4000
+	},
+	{
+		"id": 1,
+		"username": "foo",
+		"pass": "buzz",
+		"img_url": "img/avatar2.png",
+		"realname": "Юрий",
+		"cash": 8000
+	}
+]

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2 d-flex align-items-center">
+					<a href="#" class="header__logo">Rich Tech</a>
+				</div>
+				<div class="col-6 d-flex align-items-center">
+					<nav class="header__menu">
+						<ul class="menu__list">
+							<li class="list-item">
+								<a href="#" class="item-link">Магазины</a>
+							</li>
+							<li class="list-item">
+								<a href="#" class="item-link">Покупателям</a>
+							</li>
+							<li class="list-item">
+								<a href="#" class="item-link">Доставка</a>
+							</li>
+							<li class="list-item">
+								<a href="#" class="item-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-4">
+					<form action="#" class="header__login active">
+						<div class="login-inputs">
+							<input type="text" value="test" placeholder="Логин" class="login-username">
+							<input type="password" value="111" placeholder="Пароль" class="login-password">
+						</div>
+						<button class="login-btn white-btn btn">
+							Войти
+						</button>
+					</form>
+					<div class="header__profile">
+						<img src="img/users.png" class="profile__img">
+						<div class="profile__about">
+							<p class="profile__name">null</p>
+							<p class="profile__cash">null</p>
+						</div>
+						<button class="profile__unlogin-btn white-btn btn">
+							Выйти
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="listing active">
+		<div class="listing__header">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 d-flex align-items-center">
+						<h1 class="listing__label">
+							Ноутбуки
+						</h1>
+					</div>
+					<div class="col-9">
+						<div class="listing__cart">
+							<div class="cart__props">
+								<p class="cart-empty-label">Корзина пуста :(</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<p class="cart-label">Корзина</p>
+									<p class="cart-size">Всего товаров: 0</p>
+								</div>
+								<div class="props__list"></div>
+								<div class="d-flex justify-content-between align-items-center">
+									<p class="cart-price">Сумма заказа: $0</p>
+									<button class="cart-buy-btn white-btn btn">Заказать</button>
+								</div>
+							</div>
+							<div class="cart-img">
+								<div class="cart-prop-count">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="listing__properties-list"></div>
+	</section>
+
+
+	<section class="check">
+		<div class="container">
+			<div class="row">
+				<div class="col-10 offset-1">
+					<div class="check__wrap">
+						<button class="check__back-btn black-btn btn">←</button>
+						<h1 class="check__label">
+							Заказ оформлен!
+						</h1>
+						<div class="check__list"></div>
+						<div class="check__info">
+							<p class="check-size">Всего товаров: 0</p>
+							<p class="check-price">Сумма заказа: $0</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<p class="footer__copyright">
+			Copyright © 2020 Richtech.com. Все права защищены.
+		</p>
+	</footer>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- <script src="js/main.js"></script> -->
+	<script type="module" src="js/model.js"></script>
+	<script type="module" src="js/view.js"></script>
+	<script type="module" src="js/controller.js"></script>
+</body>
+</html>
